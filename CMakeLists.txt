@@ -189,6 +189,7 @@ find_package(Qt6
         Sql
         Svg
         TextToSpeech
+        WebSockets
         Widgets
         Xml
         Quick3D

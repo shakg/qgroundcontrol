@@ -19,6 +19,8 @@ target_sources(${CMAKE_PROJECT_NAME}
         MultiVehicleManager.h
         RemoteIDManager.cc
         RemoteIDManager.h
+        ROS2Manager.cc
+        ROS2Manager.h
         StandardModes.cc
         StandardModes.h
         TerrainProtocolHandler.cc
@@ -32,6 +34,8 @@ target_sources(${CMAKE_PROJECT_NAME}
         VehicleObjectAvoidance.cc
         VehicleObjectAvoidance.h
 )
+
+target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE Qt6::WebSockets)
 
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 

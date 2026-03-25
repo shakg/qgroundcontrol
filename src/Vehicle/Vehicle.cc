@@ -31,6 +31,7 @@
 #include "QGCQGeoCoordinate.h"
 #include "RallyPointManager.h"
 #include "RemoteIDManager.h"
+#include "ROS2Manager.h"
 #include "SettingsManager.h"
 #include "AppSettings.h"
 #include "FlyViewSettings.h"
@@ -342,6 +343,8 @@ void Vehicle::_commonInit(LinkInterface* link)
     }
 
     _gimbalController = new GimbalController(this);
+
+    _ros2Manager = new ROS2Manager(this);
 
     _createCameraManager();
 }
